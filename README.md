@@ -103,10 +103,10 @@ I solved these by removing duplicate code, testing step-by-step, and using the b
 
 ## 📸 Screenshots (optional)
 
-Not added
+![Console Output](images/week4.png)
 
 ---
 
 ## 🌐 Live Demo
 
-Not deployed yet
+(https://github.com/ladyrancia/iyf-s10-week-04-ladyrancia/blob/main/main.js)
