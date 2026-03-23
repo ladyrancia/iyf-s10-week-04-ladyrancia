@@ -3,18 +3,58 @@
 ## Author
 
 * **Name:** Lady Rancia
-* **GitHub:** [@MaisoriKitayama](https://github.com/MaisoriKitayama)
-* **Date:** March 2026
+* **GitHub:** [@ladyrancia](https://github.com/ladyrancia)
+* **Date:** March 23, 2026
 
 ---
 
-## Project Description
+## 📌 Project Description
 
-This project focuses on learning the fundamentals of JavaScript. It includes practice with variables, data types, operators, functions, control flow, loops, arrays, objects, and building mini-projects like a calculator and a grade tracker.
+This project covers the fundamentals of JavaScript as part of Week 4 training. It includes practice with variables, data types, operators, functions, control flow, loops, arrays, objects, and mini-projects to apply the concepts.
 
 ---
 
-## Technologies Used
+## 🚀 Features
+
+* JavaScript variable declarations (`let`, `const`)
+* Data types and operators
+* Functions (declarations, expressions, arrow functions)
+* Control flow (`if/else`, `switch`)
+* Loops (`for`, `while`, FizzBuzz, patterns)
+* Array methods (`map`, `filter`, `reduce`)
+* Object creation and manipulation
+* Working with arrays of objects
+
+---
+
+## 🧮 Mini Project: Calculator
+
+A console-based calculator that supports:
+
+* Addition (+)
+* Subtraction (-)
+* Multiplication (*)
+* Division (/)
+* Modulus (%)
+* Power (**)
+
+Includes error handling for division by zero.
+
+---
+
+## 🎓 Final Project: Grade Tracker
+
+A student grade management system that can:
+
+* Add students
+* Calculate averages
+* Find the top student
+* Identify struggling students
+* Generate report cards
+
+---
+
+## 🛠️ Technologies Used
 
 * HTML5
 * CSS3
@@ -22,60 +62,51 @@ This project focuses on learning the fundamentals of JavaScript. It includes pra
 
 ---
 
-## Features
+## ▶️ How to Run
 
-* JavaScript variable and data type practice
-* Mathematical and logical operations
-* Custom functions (area calculation, temperature conversion, etc.)
-* Control flow using if/else and switch statements
-* Loops including FizzBuzz and star patterns
-* Console-based calculator with multiple operations
-* Array methods like map, filter, and reduce
-* Object manipulation and iteration
-* Student grade tracker mini-project
+1. Open `index.html` using Live Server or your browser
+2. Open browser console (Right-click → Inspect → Console or press F12)
+3. View JavaScript outputs
 
 ---
 
-## How to Run
+## 📂 Project Structure
 
-1. Clone this repository
-2. Open the project folder
-3. Open `index.html` using Live Server or your browser
-4. Open the browser console (Right-click → Inspect → Console)
-5. View the JavaScript outputs
+```
+index.html
+main.js
+```
 
 ---
 
-## Lessons Learned
+## 🧠 Lessons Learned
 
-* How to use JavaScript variables and data types
+* How JavaScript integrates with HTML
 * The difference between `let` and `const`
-* Writing and using functions
-* Understanding control flow and loops
+* Writing reusable functions
+* Using loops and conditionals effectively
 * Working with arrays and objects
-* Using array methods like map, filter, and reduce
-* Structuring and debugging JavaScript code
+* Debugging using the browser console
 
 ---
 
-## Challenges Faced
+## ⚠️ Challenges Faced
 
-* Understanding how to connect JavaScript to HTML
-* Fixing duplicate function errors
-* Debugging console errors and learning how to read them
-* Managing large code files without confusion
+* Debugging console errors
+* Duplicate function declarations causing errors
+* Managing a large JavaScript file
 
 **Solution:**
-I solved these by carefully reviewing my code, removing duplicates, and testing step-by-step in the console.
+I solved these by removing duplicate code, testing step-by-step, and using the browser console to identify and fix errors.
 
 ---
 
-## Screenshots (optional)
+## 📸 Screenshots (optional)
 
-N/A
+Not added
 
 ---
 
-## Live Demo (if deployed)
+## 🌐 Live Demo
 
 Not deployed yet
