@@ -285,9 +285,6 @@ const names = students.map(s => s.name);
 console.log(names);
 
 
-// =======================
-// FINAL PROJECT
-// =======================
 const gradeTracker = {
     students: [],
 
@@ -295,14 +292,114 @@ const gradeTracker = {
         this.students.push({ name, grades });
     },
 
+    getStudent(name) {
+        return this.students.find(s => s.name === name) || null;
+    },
+
     getStudentAverage(name) {
-        const student = this.students.find(s => s.name === name);
+        const student = this.getStudent(name);
         if (!student) return null;
 
         const grades = Object.values(student.grades);
         return grades.reduce((a, b) => a + b, 0) / grades.length;
+    },
+
+    getSubjectAverage(subject) {
+        let total = 0;
+        let count = 0;
+
+        for (const student of this.students) {
+            if (student.grades[subject] !== undefined) {
+                total += student.grades[subject];
+                count++;
+            }
+        }
+
+        return count === 0 ? 0 : total / count;
+    },
+
+    getTopStudent() {
+        let top = null;
+        let highest = 0;
+
+        for (const student of this.students) {
+            const avg = this.getStudentAverage(student.name);
+            if (avg > highest) {
+                highest = avg;
+                top = student;
+            }
+        }
+
+        return top;
+    },
+
+    getStrugglingStudents() {
+        return this.students.filter(student =>
+            this.getStudentAverage(student.name) < 70
+        );
+    },
+
+    getLetterGrade(score) {
+        if (score >= 90) return "A";
+        else if (score >= 80) return "B";
+        else if (score >= 70) return "C";
+        else if (score >= 60) return "D";
+        else return "F";
+    },
+
+    generateReportCard(name) {
+        const student = this.getStudent(name);
+        if (!student) return "Student not found";
+
+        let report = `Report Card for ${student.name}\n`;
+
+        for (const [subject, score] of Object.entries(student.grades)) {
+            report += `${subject}: ${score} (${this.getLetterGrade(score)})\n`;
+        }
+
+        const avg = this.getStudentAverage(name);
+        report += `Average: ${avg.toFixed(2)}`;
+
+        return report;
     }
 };
 
-gradeTracker.addStudent("Alice", { math: 95, english: 88 });
+// TEST DATA
+gradeTracker.addStudent("Alice", { math: 95, english: 88, science: 92 });
+gradeTracker.addStudent("Bob", { math: 72, english: 85, science: 78 });
+gradeTracker.addStudent("Charlie", { math: 60, english: 65, science: 58 });
+
 console.log(gradeTracker.getStudentAverage("Alice"));
+console.log(gradeTracker.getSubjectAverage("math"));
+console.log(gradeTracker.getTopStudent());
+console.log(gradeTracker.getStrugglingStudents());
+console.log(gradeTracker.generateReportCard("Alice"));
+
+const calculatorObj = {
+    add(a, b) { return a + b; },
+    subtract(a, b) { return a - b; },
+    multiply(a, b) { return a * b; }
+};
+
+console.log(calculatorObj.add(5, 3));
+
+const scores = {
+    math: 95,
+    english: 88,
+    science: 92
+};
+
+for (const [subject, score] of Object.entries(scores)) {
+    console.log(`${subject}: ${score}`);
+}
+function findLargest(arr) {
+    let max = arr[0];
+
+    for (let num of arr) {
+        if (num > max) max = num;
+    }
+
+    return max;
+}
+
+console.log(findLargest([3, 7, 2, 9, 5]));
